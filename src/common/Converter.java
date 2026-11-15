@@ -48,7 +48,7 @@ public class Converter {
     // English to morse
     public String englishToMorse(String text) {
         if (text == null || text.trim().isEmpty()) {
-            throw new IllegalArgumentException("str is null");
+            throw new IllegalArgumentException("Cannot be empty");
         }
 
         StringBuilder result = new StringBuilder();
@@ -74,7 +74,7 @@ public class Converter {
     // Morse to english
     public String morseToEnglish(String morse) {
         if (morse == null || morse.trim().isEmpty()) {
-            throw new IllegalArgumentException("str is null");
+            throw new IllegalArgumentException("Cannot be empty");
         }
 
         String[] codes = morse.trim().split("\\s+");
