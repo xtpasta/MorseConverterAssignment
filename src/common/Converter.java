@@ -55,19 +55,16 @@ public class Converter {
 
         text = text.toUpperCase();
 
-        for (int i = 0; i < text.length(); i++) {
-            char character = text.charAt(i);
-
-            if (character == ' ') {
+        for (char letter : text.toCharArray()) {
+            if (letter == ' ') {
                 continue;
             }
 
-            if (!englishToMorse.containsKey(character)) {
-                throw new IllegalArgumentException("Invalid character " + character);
+            if (!englishToMorse.containsKey(letter)) {
+                throw new IllegalArgumentException("Invalid character " + letter);
             }
 
-            String letter = englishToMorse.get(character);
-            result.append(letter);
+            result.append(englishToMorse.get(letter));
             result.append(' ');
         }
         return result.toString().trim();
