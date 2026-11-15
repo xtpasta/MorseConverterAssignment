@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class Converter {
     // Hashmap
-    Map<Character, String> englishToMorse;
-    Map<String, Character> morseToEnglish;
+    private final Map<Character, String> englishToMorse;
+    private final Map<String, Character> morseToEnglish;
 
     public Converter() {
         englishToMorse = new HashMap<>();
